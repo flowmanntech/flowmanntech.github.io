@@ -2,366 +2,69 @@
 <html lang="tr">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <title>FlowManNTech — Android Uygulama Geliştirme | Mobil Çözümler</title>
-  <meta name="description" content="FlowManNTech, Android uygulama geliştirme, UX/UI tasarım, performans optimizasyonu ve yayınlama danışmanlığı sunan bir mobil yazılım şirketidir." />
-  <meta name="keywords" content="Android, uygulama geliştirme, mobil yazılım, Kotlin, Java, Flutter, UI/UX, Play Store, FlowManNTech" />
+  <title>FlowManNTech — Android Uygulama Geliştirme</title>
+  <meta name="description" content="FlowManNTech, Android uygulama geliştirme hizmetleri sunar. Mobil fikirlerinizi hayata geçiriyoruz." />
+  <meta name="keywords" content="Android, uygulama geliştirme, mobil yazılım, FlowManNTech" />
   <link rel="canonical" href="https://USERNAME.github.io/flowmanntech/" />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="FlowManNTech" />
-  <meta property="og:title" content="FlowManNTech — Android Uygulama Geliştirme" />
-  <meta property="og:description" content="Android odaklı mobil çözümler. Ürününüzü fikirden mağazaya taşıyın." />
-  <meta property="og:url" content="https://USERNAME.github.io/flowmanntech/" />
-  <meta property="og:image" content="https://USERNAME.github.io/flowmanntech/assets/og-cover.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="FlowManNTech — Android Uygulama Geliştirme" />
-  <meta name="twitter:description" content="Android odaklı mobil çözümler. Ürününüzü fikirden mağazaya taşıyın." />
-  <meta name="twitter:image" content="https://USERNAME.github.io/flowmanntech/assets/og-cover.jpg" />
-
-  <!-- Icons -->
-  <link rel="icon" href="/assets/favicon.ico" />
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-
-  <!-- Tailwind CSS (CDN) -->
+  <!-- Basit stil için Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Tailwind config (isteğe bağlı küçük özelleştirme)
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#eef8ff', 100: '#d6eeff', 200: '#aeddff', 300: '#7ac8ff', 400: '#49adff',
-              500: '#1f8fff', 600: '#1671db', 700: '#135ab0', 800: '#124c8f', 900: '#123f74'
-            }
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Structured Data / JSON‑LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "FlowManNTech",
-    "url": "https://USERNAME.github.io/flowmanntech/",
-    "logo": "https://USERNAME.github.io/flowmanntech/assets/logo.svg",
-    "sameAs": [
-      "https://www.linkedin.com/company/flowmanntech",
-      "https://twitter.com/flowmanntech"
-    ],
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "contactType": "sales",
-      "email": "contact@flowmanntech.com",
-      "areaServed": "TR",
-      "availableLanguage": ["tr", "en"]
-    }]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "FlowManNTech",
-    "url": "https://USERNAME.github.io/flowmanntech/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://USERNAME.github.io/flowmanntech/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
-  <!-- Preconnects for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
-    /* Basit animasyonlar */
-    .fade-up { animation: fadeUp .7s ease both; }
-    @keyframes fadeUp { from {opacity:0; transform: translateY(10px);} to {opacity:1; transform: translateY(0);} }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; }
   </style>
 </head>
 <body class="bg-white text-slate-900">
-  <!-- Skip link -->
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:ring focus:px-3 focus:py-2 rounded-md">İçeriğe geç</a>
-
-  <!-- Header / Navbar -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="#" class="flex items-center gap-2">
-          <img src="/assets/logo.svg" alt="FlowManNTech logo" class="h-8 w-8" loading="lazy" />
-          <span class="font-semibold">FlowManNTech</span>
-        </a>
-        <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="#services" class="hover:text-brand-700">Hizmetler</a>
-          <a href="#work" class="hover:text-brand-700">Projeler</a>
-          <a href="#about" class="hover:text-brand-700">Hakkımızda</a>
-          <a href="#faq" class="hover:text-brand-700">SSS</a>
-          <a href="#contact" class="px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Teklif Al</a>
-        </nav>
-        <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-slate-300" aria-label="Menüyü aç/kapat">
-          <span>☰</span>
-        </button>
-      </div>
+  <!-- Header -->
+  <header class="py-6 border-b">
+    <div class="max-w-4xl mx-auto px-4 flex items-center gap-3">
+      <img src="/assets/logo.svg" alt="FlowManNTech" class="h-10 w-10" />
+      <h1 class="text-2xl font-bold">FlowManNTech</h1>
     </div>
-    <nav id="mobileNav" class="md:hidden hidden border-t border-slate-200">
-      <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
-        <a href="#services" class="hover:text-brand-700">Hizmetler</a>
-        <a href="#work" class="hover:text-brand-700">Projeler</a>
-        <a href="#about" class="hover:text-brand-700">Hakkımızda</a>
-        <a href="#faq" class="hover:text-brand-700">SSS</a>
-        <a href="#contact" class="px-4 py-2 rounded-xl bg-brand-600 text-white w-max">Teklif Al</a>
-      </div>
-    </nav>
   </header>
 
   <!-- Hero -->
-  <section class="bg-gradient-to-b from-brand-50 to-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
-      <div class="fade-up">
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-          Android Uygulamanızı <span class="text-brand-700">fikirden mağazaya</span> taşıyoruz
-        </h1>
-        <p class="mt-4 text-slate-700 max-w-2xl">FlowManNTech; Kotlin/Java, Jetpack Compose ve modern Android mimarileriyle ölçeklenebilir, güvenli ve performanslı mobil çözümler üretir.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#contact" class="px-5 py-3 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Projenizi Konuşalım</a>
-          <a href="#work" class="px-5 py-3 rounded-xl border border-slate-300 hover:border-brand-600 hover:text-brand-700">Çalışmalarımız</a>
-        </div>
-        <ul class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
-          <li class="p-4 rounded-xl border">Jetpack Compose</li>
-          <li class="p-4 rounded-xl border">Kotlin · Java</li>
-          <li class="p-4 rounded-xl border">Play Console</li>
-          <li class="p-4 rounded-xl border">CI/CD</li>
-        </ul>
-      </div>
-      <div class="fade-up">
-        <img src="/assets/hero-app-preview.png" alt="Android uygulama önizlemesi" class="w-full rounded-2xl shadow-lg" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl sm:text-3xl font-bold">Hizmetler</h2>
-      <p class="mt-2 text-slate-700 max-w-2xl">İhtiyacınıza göre uçtan uca Android geliştirme ve yayınlama süreçleri.</p>
-      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <article class="p-6 rounded-2xl border hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg">Özel Android Geliştirme</h3>
-          <p class="mt-2 text-sm text-slate-700">Kotlin/Java ile yerel (native) uygulamalar. MVVM, Clean Architecture, Room, Retrofit.</p>
-        </article>
-        <article class="p-6 rounded-2xl border hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg">UI/UX & Tasarım Sistemleri</h3>
-          <p class="mt-2 text-sm text-slate-700">Jetpack Compose ile modern, erişilebilir ve marka uyumlu arayüzler.</p>
-        </article>
-        <article class="p-6 rounded-2xl border hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg">Yayınlama & Büyüme</h3>
-          <p class="mt-2 text-sm text-slate-700">Play Store optimizasyonu (ASO), sürümleme, crash & performans izleme (Firebase).</p>
-        </article>
-        <article class="p-6 rounded-2xl border hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg">Bakım & Devamlı Gelişim</h3>
-          <p class="mt-2 text-sm text-slate-700">Güvenlik yamaları, SDK güncellemeleri, yeni özellikler, test otomasyonu.</p>
-        </article>
-        <article class="p-6 rounded-2xl border hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg">Çoklu Platform</h3>
-          <p class="mt-2 text-sm text-slate-700">Flutter veya Kotlin Multiplatform ile Android + iOS hedefleme.</p>
-        </article>
-        <article class="p-6 rounded-2xl border hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg">Danışmanlık</h3>
-          <p class="mt-2 text-sm text-slate-700">Kod inceleme, mimari iyileştirme, performans optimizasyonu.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Work / Case studies -->
-  <section id="work" class="py-16 lg:py-24 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl sm:text-3xl font-bold">Öne Çıkan Çalışmalar</h2>
-      <p class="mt-2 text-slate-700 max-w-2xl">Gizlilik gereği bazı projeler maskelenmiştir. Yer tutucu açıklamaları kendi projelerinizle değiştirin.</p>
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <!-- Project card 1 -->
-        <article class="rounded-2xl border overflow-hidden bg-white">
-          <img src="/assets/work-1.jpg" alt="E-ticaret uygulaması ekranları" class="w-full h-48 object-cover" loading="lazy" />
-          <div class="p-6">
-            <h3 class="font-semibold">E-Ticaret SuperApp</h3>
-            <p class="mt-2 text-sm text-slate-700">Compose + Clean Architecture. 1M+ indirme, %99 çökme olmadan çalışma.</p>
-            <ul class="mt-3 text-xs text-slate-600 flex flex-wrap gap-2">
-              <li class="px-2 py-1 bg-slate-100 rounded">Kotlin</li>
-              <li class="px-2 py-1 bg-slate-100 rounded">Compose</li>
-              <li class="px-2 py-1 bg-slate-100 rounded">Firebase</li>
-            </ul>
-          </div>
-        </article>
-        <!-- Project card 2 -->
-        <article class="rounded-2xl border overflow-hidden bg-white">
-          <img src="/assets/work-2.jpg" alt="Finans uygulaması ekranları" class="w-full h-48 object-cover" loading="lazy" />
-          <div class="p-6">
-            <h3 class="font-semibold">FinTech Cüzdan</h3>
-            <p class="mt-2 text-sm text-slate-700">PCI‑DSS uyumlu, biometrik doğrulama, anlık bildirimler ve analitik.</p>
-            <ul class="mt-3 text-xs text-slate-600 flex flex-wrap gap-2">
-              <li class="px-2 py-1 bg-slate-100 rounded">Jetpack</li>
-              <li class="px-2 py-1 bg-slate-100 rounded">Room</li>
-              <li class="px-2 py-1 bg-slate-100 rounded">Hilt</li>
-            </ul>
-          </div>
-        </article>
-        <!-- Project card 3 -->
-        <article class="rounded-2xl border overflow-hidden bg-white">
-          <img src="/assets/work-3.jpg" alt="Sağlık uygulaması ekranları" class="w-full h-48 object-cover" loading="lazy" />
-          <div class="p-6">
-            <h3 class="font-semibold">Sağlık İzleme</h3>
-            <p class="mt-2 text-sm text-slate-700">Wear OS entegrasyonu, çevrimdışı senkronizasyon, HIPAA uyumluluğu.</p>
-            <ul class="mt-3 text-xs text-slate-600 flex flex-wrap gap-2">
-              <li class="px-2 py-1 bg-slate-100 rounded">Coroutines</li>
-              <li class="px-2 py-1 bg-slate-100 rounded">Retrofit</li>
-              <li class="px-2 py-1 bg-slate-100 rounded">WorkManager</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-2xl sm:text-3xl font-bold">Hakkımızda</h2>
-        <p class="mt-4 text-slate-700">FlowManNTech, mobil ürün geliştirmede <strong>şeffaf süreç</strong>, <strong>test güdümlü geliştirme</strong> ve <strong>ölçeklenebilir mimari</strong> prensipleriyle çalışır. Start‑up’lardan kurumsallara kadar farklı ölçekte ekiplerle entegre oluruz.</p>
-        <ul class="mt-6 space-y-3">
-          <li class="flex items-start gap-3"><span class="mt-1">✅</span> <span>Agile/ Scrum ritimleri, iki haftalık sprintler</span></li>
-          <li class="flex items-start gap-3"><span class="mt-1">✅</span> <span>CI/CD (GitHub Actions), otomatik test ve sürümleme</span></li>
-          <li class="flex items-start gap-3"><span class="mt-1">✅</span> <span>Detaylı dokümantasyon ve bilgi devri</span></li>
-        </ul>
-      </div>
-      <div class="rounded-2xl border p-6">
-        <h3 class="font-semibold">Teknik Yığın</h3>
-        <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
-          <div class="p-3 rounded-xl bg-slate-50 border">Kotlin / Java</div>
-          <div class="p-3 rounded-xl bg-slate-50 border">Jetpack Compose</div>
-          <div class="p-3 rounded-xl bg-slate-50 border">Hilt / Koin</div>
-          <div class="p-3 rounded-xl bg-slate-50 border">Room / SQLDelight</div>
-          <div class="p-3 rounded-xl bg-slate-50 border">Retrofit / Ktor</div>
-          <div class="p-3 rounded-xl bg-slate-50 border">Firebase / Crashlytics</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Banner -->
   <section class="py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-2xl bg-gradient-to-r from-brand-600 to-brand-700 text-white p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div>
-          <h3 class="text-xl font-semibold">Bir fikriniz mi var? Birlikte hayata geçirelim.</h3>
-          <p class="text-white/90 mt-2">1–2 iş günü içinde dönüş yapıyoruz.</p>
-        </div>
-        <a href="#contact" class="px-5 py-3 rounded-xl bg-white text-brand-800 hover:bg-slate-100">Ücretsiz Görüşme Planla</a>
-      </div>
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold">Android Uygulama Geliştirme</h2>
+      <p class="mt-4 text-slate-700">FlowManNTech, modern teknolojilerle Android uygulamaları geliştirir. Mobil fikirlerinizi tasarımdan mağazaya taşıyoruz.</p>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="py-16 lg:py-24 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl sm:text-3xl font-bold">Sık Sorulan Sorular</h2>
-      <div class="mt-8 grid md:grid-cols-2 gap-6">
-        <details class="p-6 rounded-2xl border bg-white">
-          <summary class="font-semibold cursor-pointer">Proje süreci nasıl ilerliyor?</summary>
-          <p class="mt-2 text-sm text-slate-700">Keşif & analiz → teklif → sprint planlama → geliştirme → test → yayınlama → bakım.</p>
-        </details>
-        <details class="p-6 rounded-2xl border bg-white">
-          <summary class="font-semibold cursor-pointer">Hangi teknolojileri kullanıyorsunuz?</summary>
-          <p class="mt-2 text-sm text-slate-700">Kotlin/Java, Jetpack, Compose, Hilt, Room, Retrofit, Firebase, KMP/Flutter.</p>
-        </details>
-        <details class="p-6 rounded-2xl border bg-white">
-          <summary class="font-semibold cursor-pointer">Destek ve bakım sağlıyor musunuz?</summary>
-          <p class="mt-2 text-sm text-slate-700">Evet. SLA ve aylık bakım paketleriyle sürüm/SDK güncellemelerini yönetiyoruz.</p>
-        </details>
-        <details class="p-6 rounded-2xl border bg-white">
-          <summary class="font-semibold cursor-pointer">Fiyatlandırma nasıl?</summary>
-          <p class="mt-2 text-sm text-slate-700">Sabit fiyatlı paketler veya zaman/iş gücü bazlı model. İhtiyaca göre netleştiriyoruz.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl sm:text-3xl font-bold">İletişim</h2>
-      <p class="mt-2 text-slate-700 max-w-2xl">Kısa formu doldurun; ekibimiz en kısa sürede dönüş yapsın. Statik barındırma olduğu için form, e‑posta uygulamanızı kullanır.</p>
-
-      <form class="mt-8 grid sm:grid-cols-2 gap-4" action="mailto:contact@flowmanntech.com" method="post" enctype="text/plain">
-        <label class="block">
-          <span class="text-sm">Ad Soyad</span>
-          <input name="name" required class="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring focus:ring-brand-200" />
-        </label>
-        <label class="block">
-          <span class="text-sm">E‑posta</span>
-          <input type="email" name="email" required class="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring focus:ring-brand-200" />
-        </label>
-        <label class="block sm:col-span-2">
-          <span class="text-sm">Mesaj</span>
-          <textarea name="message" rows="5" required class="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring focus:ring-brand-200"></textarea>
-        </label>
-        <div class="sm:col-span-2 flex items-center justify-between">
-          <label class="inline-flex items-center gap-2 text-sm">
-            <input type="checkbox" required class="rounded" /> KVKK aydınlatma metnini kabul ediyorum.
-          </label>
-          <button class="px-5 py-3 rounded-xl bg-brand-600 text-white hover:bg-brand-700" type="submit">Gönder</button>
+  <!-- Hizmetler / Bilgiler -->
+  <section class="py-12 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-xl font-semibold text-center">Neler Sunuyoruz?</h3>
+      <div class="mt-8 grid sm:grid-cols-2 gap-6">
+        <div class="p-6 rounded-xl border bg-white">
+          <h4 class="font-semibold">Özel Android Geliştirme</h4>
+          <p class="mt-2 text-sm text-slate-700">Kotlin ve Java kullanarak performanslı ve güvenli Android uygulamaları geliştiriyoruz.</p>
         </div>
-      </form>
-
-      <div class="mt-8 text-sm text-slate-600">
-        <p><strong>E‑posta:</strong> contact@flowmanntech.com · <strong>GitHub:</strong> github.com/USERNAME</p>
+        <div class="p-6 rounded-xl border bg-white">
+          <h4 class="font-semibold">UI/UX Tasarım</h4>
+          <p class="mt-2 text-sm text-slate-700">Modern ve kullanıcı dostu arayüzlerle uygulamanızın öne çıkmasını sağlıyoruz.</p>
+        </div>
+        <div class="p-6 rounded-xl border bg-white">
+          <h4 class="font-semibold">Play Store Yayınlama</h4>
+          <p class="mt-2 text-sm text-slate-700">Uygulamanızın Google Play üzerinde yayınlanmasını ve yönetimini üstleniyoruz.</p>
+        </div>
+        <div class="p-6 rounded-xl border bg-white">
+          <h4 class="font-semibold">Bakım & Destek</h4>
+          <p class="mt-2 text-sm text-slate-700">Yayın sonrası bakım, güncelleme ve destek hizmetleri sunuyoruz.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-sm text-slate-600">
-      <div class="flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
-        <div class="flex items-center gap-2">
-          <img src="/assets/logo.svg" alt="FlowManNTech" class="h-6 w-6" loading="lazy" />
-          <span>© <span id="y"></span> FlowManNTech</span>
-        </div>
-        <nav class="flex flex-wrap gap-4">
-          <a href="#about" class="hover:text-slate-900">Hakkımızda</a>
-          <a href="#services" class="hover:text-slate-900">Hizmetler</a>
-          <a href="#contact" class="hover:text-slate-900">İletişim</a>
-          <a href="/privacy.html" class="hover:text-slate-900">Gizlilik</a>
-          <a href="/humans.txt" class="hover:text-slate-900">humans.txt</a>
-        </nav>
-      </div>
+  <footer class="py-6 border-t">
+    <div class="max-w-4xl mx-auto px-4 text-center text-sm text-slate-600">
+      © <span id="y"></span> FlowManNTech — Android Uygulama Geliştirme
     </div>
   </footer>
 
-  <!-- NoScript: arama motorları için kısa içerik -->
-  <noscript>
-    FlowManNTech, Android uygulama geliştirme ve mobil yazılım danışmanlığı sağlar. İletişim: contact@flowmanntech.com
-  </noscript>
-
-  <!-- Small JS: mobil menü & yıl -->
   <script>
-    const y = document.getElementById('y'); if (y) y.textContent = new Date().getFullYear();
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileNav = document.getElementById('mobileNav');
-    if (menuBtn && mobileNav) {
-      menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
-    }
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
