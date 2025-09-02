@@ -39,3 +39,4 @@ plugins:
 #  - jekyll-feed
 
 remote_theme: samarsault/plainwhite-jekyll
+$ gem install plainwhite
